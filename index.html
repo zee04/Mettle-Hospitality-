@@ -24,9 +24,21 @@
       <nav id="nav-menu">
         <ul>
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">Founder</a></li>
-          <li><a href="service.html" class="nav-link">Services</a></li>
-          <li><a href="work.html" class="nav-link">Projects</a></li>
+          <li><a href="about.html" class="nav-link">About us</a></li>
+          <li class="dropdown">
+  <a href="service.html" class="nav-link dropdown-toggle">Services</a>
+  <ul class="dropdown-menu">
+    <li><a href="service.html#current">Current Services</a></li>
+    <li><a href="service.html#past">Past Engagements</a></li>
+  </ul>
+</li>
+          <li class="dropdown">
+  <a href="work.html" class="nav-link dropdown-toggle">Projects</a>
+  <ul class="dropdown-menu">
+    <li><a href="work.html#current">Current Projects</a></li>
+    <li><a href="work.html#past">Past Projects</a></li>
+  </ul>
+</li>
           <li><a href="media.html" class="nav-link">Media</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -38,7 +50,7 @@
   <section class="slideshow-hero" id="home">
     <div class="slideshow-container">
       <!-- Slide 1: Logo + Brand intro -->
-      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/heroback.JPG') center/cover no-repeat; background-attachment: fixed;">
+      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/heroback.JPG') center/cover no-repeat;">
         <div class="slide-content">
           <img src="images/mettle logo no back.png" alt="Mettle Hospitality" class="slide-logo">
           <h2>Mettle Hospitality</h2>
@@ -51,7 +63,7 @@
       </div>
 
       <!-- Slide 2: Innovation meets excellence -->
-      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/jarback.jpg') center/cover no-repeat; background-attachment: fixed;">
+      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/jarback.jpg') center/cover no-repeat;">
         <div class="slide-content">
           <h2>Where <span>culinary innovation</span> meets <span>operational excellence</span></h2>
           <p>Transforming hospitality concepts into thriving businesses that set industry standards</p>
@@ -63,7 +75,7 @@
       </div>
 
       <!-- Slide 3: Sweet spot -->
-      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/panback.jpg') center/cover no-repeat; background-attachment: fixed;">
+      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/panback.jpg') center/cover no-repeat;">
         <div class="slide-content">
           <h2>We hit the sweet spot between <span>market relevance and creativity</span></h2>
           <p>Design concepts, bar programs, kitchen flows so excellence is automatic</p>
@@ -75,7 +87,7 @@
       </div>
 
       <!-- Slide 4: Opinions into options -->
-      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/whiteback.JPG') center/cover no-repeat; background-attachment: fixed;">
+      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/whiteback.JPG') center/cover no-repeat;">
         <div class="slide-content">
           <h2><span>We turn opinions into options</span></h2>
           <p>Consistent, rigorous thinking. No noise. Just clarity and partnership</p>
@@ -87,7 +99,7 @@
       </div>
 
       <!-- Slide 5: Why Mettle -->
-      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/cornback.JPG') center/cover no-repeat; background-attachment: fixed;">
+      <div class="slide" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), url('images/cornback.JPG') center/cover no-repeat;">
         <div class="slide-content">
           <h2>From blank space to <span>first service</span></h2>
           <p>Brand, menu, systems, hiring, training, go-live. Complete end-to-end implementation</p>
@@ -106,9 +118,32 @@
 
   <!-- FOOTER -->
   <footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="images/mettle logo no back.png" alt="Mettle Hospitality" class="footer-logo">
+    </div>
+    <div class="footer-center">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Founder</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="work.html">Projects</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-right">
+      <p>Based in Mumbai, serving worldwide</p>
+      <p><a href="contact.html">Get in touch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
     <p>&copy; 2025 Mettle Hospitality. All rights reserved.</p>
-    <p><a href="contact.html">Get in touch</a> | Based in Mumbai, serving nationwide & globally</p>
-  </footer>
+  </div>
+</footer>
+
 
   <script src="app.js"></script>
 </body>
