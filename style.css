@@ -191,6 +191,8 @@ section.slideshow-hero {
   border: none;
   padding: 0;
   margin: 0;
+  max-width: none;   /* Add this */
+  width: 100%;       /* Add this just to be safe */
 }
 
 .section-header {
