@@ -1484,4 +1484,124 @@ footer {
     .sauce-container { flex-direction: column; }
     .sauce-image, .sauce-content { width: 100%; }
 }
+/* =========================================================
+   SERVICES LOOP – FIX BASED ON fix-please.jpg
+   ========================================================= */
+
+/* 1) Service headings: keep Playfair, add stronger underline */
+.text-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-beige);
+  margin-bottom: 8px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Turn the underline into a pseudo-element, brand‑deck style */
+.text-block h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-crimson);
+}
+
+/* Hide old crimson-line divs under headings (we replaced them) */
+.text-block .crimson-line {
+  display: none;
+}
+
+/* 2) Connector lines from text → ring: bold crimson with dot at node side */
+.connector-line {
+  height: 2px;
+  width: 90px;                         /* slightly longer to reach ring */
+  background-color: var(--accent-crimson);
+  opacity: 1;                           /* no fading */
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 18px;
+}
+
+/* dot at the ring end */
+.connector-line::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-crimson);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* left items: dot on right end */
+.item-left .connector-line::after {
+  right: -3px;
+}
+
+/* right items: dot on left end */
+.item-right .connector-line::after {
+  left: -3px;
+}
+
+/* 3) Outer loop ring: thicker + more visible, slightly larger */
+.loop-ring {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 3px solid rgba(245, 245, 220, 0.4);  /* thicker beige */
+  position: relative;
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 4) Nodes: crimson glow + inner dark circle + SVG on top */
+.node {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--accent-crimson);     /* outer glow colour */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 20px rgba(165, 64, 64, 0.9),          /* crimson glow */
+    0 0 0 4px #000000;                         /* black halo, like ss */
+  z-index: 5;
+}
+
+/* inner dark disc with thin light stroke */
+.node::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 2px solid var(--text-beige);
+}
+
+/* SVG icon sits on top of inner disc */
+.node svg {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  stroke: var(--text-beige);
+  stroke-width: 1.6;
+  fill: none;
+}
+
+/* keep your existing positions, just slightly pushed out
+   so nodes sit on the thicker ring */
+.node-l-1 { top: 25%; left: 5%;  transform: translate(-50%, -50%); }
+.node-l-2 { bottom: 25%; left: 5%; transform: translate(-50%, 50%); }
+
+.node-r-1 { top: 15%; right: 5%;  transform: translate(50%, -50%); }
+.node-r-2 { top: 50%; right: -10px; transform: translate(50%, -50%); }
+.node-r-3 { bottom: 15%; right: 5%; transform: translate(50%, 50%); }
 
