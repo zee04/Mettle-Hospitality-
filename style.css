@@ -1052,7 +1052,7 @@ footer {
   background-image: url('images/crew.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   align-items: center;
   justify-content: flex-start;
