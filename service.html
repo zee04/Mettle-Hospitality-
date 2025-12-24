@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Mettle Hospitality</title>
-    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="services-body">
 
-    <!-- Sticky Navigation -->
+    <!-- Sticky Navigation (Font fixed to Playfair) -->
     <header class="nav-header">
         <nav class="navbar">
             <div class="logo">METTLE</div>
@@ -25,97 +24,119 @@
         </nav>
     </header>
 
-    <main>
-        <!-- SECTION 1: The Services Loop Diagram -->
-        <section id="services-loop" class="services-wrapper">
-            <!-- Background Image with Dark Overlay -->
-            <div class="bg-layer"></div>
-            
-            <div class="content-container">
-                <!-- Left Column: 2 Items -->
-                <div class="column left-col">
-                    <div class="service-item item-left">
-                        <div class="text-block">
-                            <h3>Turnkey Solutions</h3>
-                            <div class="crimson-line"></div>
-                            <p>From blank space to first service: brand, menu, systems, hiring, training, go-live.</p>
-                        </div>
-                        <div class="connector-line"></div>
+    <main class="services-wrapper">
+        <!-- Background Image with Dark Overlay -->
+        <div class="bg-layer"></div>
+        
+        <div class="content-container">
+            <!-- Left Column: 2 Items (Right Aligned) -->
+            <div class="column left-col">
+                <!-- Item 1: Turnkey -->
+                <div class="service-item item-left">
+                    <div class="text-block">
+                        <h3>Turnkey Solutions</h3>
+                        <div class="crimson-line"></div>
+                        <p>From blank space to first service: brand, menu, systems, hiring, training, go-live.</p>
+                    </div>
+                    <!-- The Arrow/Line -->
+                    <div class="connector-line line-left"></div>
+                </div>
+
+                <!-- Item 2: Styling -->
+                <div class="service-item item-left">
+                    <div class="text-block">
+                        <h3>Food Styling & Visuals</h3>
+                        <div class="crimson-line"></div>
+                        <p>Professional photography and styling that captures your culinary vision authentically.</p>
+                    </div>
+                    <div class="connector-line line-left"></div>
+                </div>
+            </div>
+
+            <!-- Center Column: The Loop with ICONS -->
+            <div class="column center-col">
+                <div class="loop-ring">
+                    
+                    <!-- Node 1: Turnkey (Key Icon) -->
+                    <div class="node node-l-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
                     </div>
 
-                    <div class="service-item item-left">
-                        <div class="text-block">
-                            <h3>Food Styling & Visuals</h3>
-                            <div class="crimson-line"></div>
-                            <p>Professional photography and styling that captures your culinary vision authentically.</p>
-                        </div>
-                        <div class="connector-line"></div>
+                    <!-- Node 2: Styling (Camera Icon) -->
+                    <div class="node node-l-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    </div>
+
+                    <!-- Node 3: F&B (Chef Hat/Utensils Icon) -->
+                    <div class="node node-r-1">
+                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+
+                    <!-- Node 4: Scale (Chart Icon) -->
+                    <div class="node node-r-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+
+                    <!-- Node 5: Dining (Cloche/Dish Icon) -->
+                    <div class="node node-r-3">
+                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M10 9a2 2 0 0 1 2 2v10m-4 0h8"></path></svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: 3 Items (Left Aligned) -->
+            <div class="column right-col">
+                <!-- Item 3: F&B -->
+                <div class="service-item item-right">
+                    <div class="connector-line line-right"></div>
+                    <div class="text-block">
+                        <h3>F&B Consultancy</h3>
+                        <div class="crimson-line"></div>
+                        <p>Menus engineered for margins, speed, and identity. Strategic culinary design.</p>
                     </div>
                 </div>
 
-                <!-- Center Column: The Loop Ring -->
-                <div class="column center-col">
-                    <div class="loop-ring">
-                        <!-- Nodes on the ring -->
-                        <div class="node node-l-1"></div>
-                        <div class="node node-l-2"></div>
-                        <div class="node node-r-1"></div>
-                        <div class="node node-r-2"></div>
-                        <div class="node node-r-3"></div>
+                <!-- Item 4: Scale -->
+                <div class="service-item item-right">
+                    <div class="connector-line line-right"></div>
+                    <div class="text-block">
+                        <h3>Scale & Franchise</h3>
+                        <div class="crimson-line"></div>
+                        <p>Standardize the magic. Systems designed for consistent excellence across locations.</p>
                     </div>
                 </div>
 
-                <!-- Right Column: 3 Items -->
-                <div class="column right-col">
-                    <div class="service-item item-right">
-                        <div class="connector-line"></div>
-                        <div class="text-block">
-                            <h3>F&B Consultancy</h3>
-                            <div class="crimson-line"></div>
-                            <p>Menus engineered for margins, speed, and identity. Strategic culinary design.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item item-right">
-                        <div class="connector-line"></div>
-                        <div class="text-block">
-                            <h3>Scale & Franchise</h3>
-                            <div class="crimson-line"></div>
-                            <p>Standardize the magic. Systems designed for consistent excellence across locations.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-item item-right">
-                        <div class="connector-line"></div>
-                        <div class="text-block">
-                            <h3>Private Dining</h3>
-                            <div class="crimson-line"></div>
-                            <p>Bespoke private dining. Exclusive culinary experiences for intimate gatherings.</p>
-                        </div>
+                <!-- Item 5: Private Dining -->
+                <div class="service-item item-right">
+                    <div class="connector-line line-right"></div>
+                    <div class="text-block">
+                        <h3>Private Dining</h3>
+                        <div class="crimson-line"></div>
+                        <p>Bespoke private dining. Exclusive culinary experiences for intimate gatherings.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- SECTION 2: Our Secret Sauce -->
-        <section id="secret-sauce" class="secret-sauce-wrapper">
-            <div class="sauce-container">
-                <div class="sauce-image">
-                    <!-- Placeholder for the Left-side image -->
-                    <img src="images/secret-sauce.jpg" alt="Culinary Detail"> 
-                </div>
-                <div class="sauce-content">
-                    <h2>Our Secret Sauce</h2>
-                    <div class="crimson-line large"></div>
-                    <p class="sauce-quote">
-                        "We turn opinions into options.<br>
-                        We remove the noise from decisions.<br>
-                        Just consistent, rigorous thinking."
-                    </p>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
+
+    <!-- Section 2: Secret Sauce -->
+    <section class="secret-sauce-wrapper">
+        <div class="sauce-container">
+            <div class="sauce-image">
+                <img src="images/secret-sauce.jpg" alt="Secret Sauce">
+            </div>
+            <div class="sauce-content">
+                <h2>Our Secret Sauce</h2>
+                <div class="crimson-line large"></div>
+                <p class="sauce-quote">
+                    "We turn opinions into options.<br>
+                    We remove the noise from decisions.<br>
+                    Just consistent, rigorous thinking."
+                </p>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
