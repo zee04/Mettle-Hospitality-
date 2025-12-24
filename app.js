@@ -1,3 +1,34 @@
+// MOMENTUM SCROLL - Makes mouse wheel smooth like trackpad
+let isScrolling = false;
+let scrollVelocity = 0;
+let scrollPosition = window.scrollY;
+const friction = 0.92; // Lower = more friction, stops faster
+const acceleration = 0.1; // How much to accelerate each wheel scroll
+
+window.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  
+  // Add velocity based on wheel delta
+  scrollVelocity += e.deltaY * acceleration;
+  
+}, { passive: false });
+
+function updateScroll() {
+  if (Math.abs(scrollVelocity) > 0.5) {
+    scrollPosition += scrollVelocity;
+    scrollVelocity *= friction; // Gradually slow down
+    
+    window.scrollTo(0, scrollPosition);
+    requestAnimationFrame(updateScroll);
+  }
+}
+
+// Start the momentum loop
+window.addEventListener('wheel', () => {
+  requestAnimationFrame(updateScroll);
+}, { passive: false });
+
+
 
 class SmoothSlideshow {
     constructor(selector, options = {}) {
