@@ -8,7 +8,7 @@
   <link rel="icon" href="images/mettle logo no back.png" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,18 +27,18 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About us</a>
         <div class="dropdown">
-            <a href="service.html" class="nav-link active dropdown-toggle">Services <span class="dropdown-arrow">›</span></a>
-            <div class="dropdown-menu">
-                <a href="service.html#offer" class="dropdown-link">What We Offer</a>
-                <a href="service.html#secret" class="dropdown-link">Our Secret Sauce</a>
-            </div>
+          <a href="service.html" class="nav-link active dropdown-toggle">Services <span class="dropdown-arrow">›</span></a>
+          <div class="dropdown-menu">
+            <a href="#offer" class="dropdown-link">What We Offer</a>
+            <a href="#secret" class="dropdown-link">Our Secret Sauce</a>
+          </div>
         </div>
         <div class="dropdown">
-            <a href="work.html" class="nav-link dropdown-toggle">Projects <span class="dropdown-arrow">›</span></a>
-            <div class="dropdown-menu">
-                <a href="work.html#current" class="dropdown-link">Current Projects</a>
-                <a href="work.html#past" class="dropdown-link">Past Projects</a>
-            </div>
+          <a href="work.html" class="nav-link dropdown-toggle">Projects <span class="dropdown-arrow">›</span></a>
+          <div class="dropdown-menu">
+            <a href="work.html#current" class="dropdown-link">Current Projects</a>
+            <a href="work.html#past" class="dropdown-link">Past Projects</a>
+          </div>
         </div>
         <a href="media.html" class="nav-link">Media</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -46,110 +46,112 @@
     </div>
   </header>
 
-  <!-- SERVICES SPLIT LAYOUT -->
-  <main class="services-split-layout" id="offer">
+  <!-- SERVICES SPLIT SECTION -->
+  <main class="services-main" id="offer">
     
     <!-- LEFT: DIAGRAM -->
-    <div class="services-diagram-container">
-      <div class="diagram-wrapper">
-        
-        <!-- Central Loop -->
-        <div class="central-loop"></div>
-
-        <!-- NODE 1: Turnkey (10 o'clock) -->
-        <div class="loop-node node-1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 21h18M5 21V7l8-4 8 4v14M10 9a2 2 0 0 1 2 2v10m-4 0h8"/>
-          </svg>
-        </div>
-        <div class="connector-line line-1"></div>
-        <div class="text-block block-1">
-          <h3>Turnkey Solutions</h3>
-          <p>From blank space to first service: brand, menu, systems, hiring, training, go-live.</p>
-        </div>
-
-        <!-- NODE 2: Culinary (1 o'clock) -->
-        <div class="loop-node node-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
-            <line x1="10" y1="9" x2="10" y2="9.1"/>
-            <line x1="14" y1="9" x2="14" y2="9.1"/>
-          </svg>
-        </div>
-        <div class="connector-line line-2"></div>
-        <div class="text-block block-2">
-          <h3>F&B Consultancy</h3>
-          <p>Menus engineered for margins, speed, and identity. Strategic culinary design.</p>
-        </div>
-
-        <!-- NODE 3: Scale (3 o'clock) -->
-        <div class="loop-node node-3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-            <polyline points="17 6 23 6 23 12"></polyline>
-          </svg>
-        </div>
-        <div class="connector-line line-3"></div>
-        <div class="text-block block-3">
-          <h3>Scale & Franchise</h3>
-          <p>Standardize the magic. Systems for consistent excellence across locations.</p>
-        </div>
-
-        <!-- NODE 4: Private Dining (5 o'clock) -->
-        <div class="loop-node node-4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-          </svg>
-        </div>
-        <div class="connector-line line-4"></div>
-        <div class="text-block block-4">
-          <h3>Private Dining</h3>
-          <p>Chef-led, intimate experiences. Exclusive culinary events that impress.</p>
-        </div>
-
-        <!-- NODE 5: Styling (8 o'clock) -->
-        <div class="loop-node node-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-            <circle cx="12" cy="13" r="4"></circle>
-          </svg>
-        </div>
-        <div class="connector-line line-5"></div>
-        <div class="text-block block-5">
-          <h3>Food Styling</h3>
-          <p>Professional photography. Authentic visual storytelling for your brand.</p>
-        </div>
-
+    <div class="services-left">
+      <div class="loop-diagram">
+        <!-- Central Circle -->
+        <svg class="loop-svg" viewBox="0 0 600 600">
+          <!-- Background circle (the loop) -->
+          <circle cx="300" cy="300" r="180" fill="none" stroke="#f5d5c8" stroke-width="12"/>
+          
+          <!-- NODE 1: Top (Turnkey) -->
+          <circle cx="300" cy="100" r="35" fill="#f5d5c8"/>
+          <g transform="translate(300, 100)">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#020617" stroke-width="1.5" x="-12" y="-12">
+              <path d="M3 21h18M5 21V7l8-4 8 4v14M10 9a2 2 0 0 1 2 2v10m-4 0h8"/>
+            </svg>
+          </g>
+          
+          <!-- NODE 2: Top Right (Culinary) -->
+          <circle cx="456" cy="156" r="35" fill="#f5d5c8"/>
+          <g transform="translate(456, 156)">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#020617" stroke-width="1.5" x="-12" y="-12">
+              <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+              <circle cx="10" cy="9" r="1"/>
+              <circle cx="14" cy="9" r="1"/>
+            </svg>
+          </g>
+          
+          <!-- NODE 3: Right (Scale) -->
+          <circle cx="500" cy="300" r="35" fill="#f5d5c8"/>
+          <g transform="translate(500, 300)">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#020617" stroke-width="1.5" x="-12" y="-12">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </g>
+          
+          <!-- NODE 4: Bottom Right (Private Dining) -->
+          <circle cx="456" cy="444" r="35" fill="#f5d5c8"/>
+          <g transform="translate(456, 444)">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#020617" stroke-width="1.5" x="-12" y="-12">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </g>
+          
+          <!-- NODE 5: Bottom Left (Styling) -->
+          <circle cx="144" cy="444" r="35" fill="#f5d5c8"/>
+          <g transform="translate(144, 444)">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#020617" stroke-width="1.5" x="-12" y="-12">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </g>
+        </svg>
       </div>
     </div>
 
-    <!-- RIGHT: IMAGE -->
-    <div class="services-image-side">
-      <img src="images/services-chef.jpg" alt="Chef at work">
+    <!-- RIGHT: TEXT CALLOUTS -->
+    <div class="services-right">
+      <div class="service-callout callout-1">
+        <h3>Turnkey Solutions</h3>
+        <p>From blank space to first service: brand, menu, systems, hiring, training, go-live. Complete end-to-end implementation.</p>
+      </div>
+      
+      <div class="service-callout callout-2">
+        <h3>F&B Consultancy</h3>
+        <p>Menus engineered for margins, speed, and identity. Strategic culinary design that balances creativity with profitability.</p>
+      </div>
+      
+      <div class="service-callout callout-3">
+        <h3>Scale & Franchise</h3>
+        <p>Standardize the magic, build the replication playbook. Systems designed for consistent excellence across multiple locations.</p>
+      </div>
+      
+      <div class="service-callout callout-4">
+        <h3>Private Dining & Pop-Ups</h3>
+        <p>Bespoke private dining—chef-led, intimate, and fully produced. Exclusive culinary experiences that create lasting impressions.</p>
+      </div>
+      
+      <div class="service-callout callout-5">
+        <h3>Food Styling & Visuals</h3>
+        <p>Because how it looks matters—but only if it is honest. Professional photography and styling that captures your culinary vision authentically.</p>
+      </div>
     </div>
 
   </main>
 
-  <!-- SECRET SAUCE -->
-  <section class="secret-sauce-section" id="secret">
-    <div class="secret-content">
+  <!-- SECRET SAUCE SECTION -->
+  <section class="secret-sauce" id="secret">
+    <div class="secret-inner">
       <h2>Our Secret Sauce</h2>
-      <div class="secret-text">
-        <p>We turn opinions into options.</p>
-        <p>We remove the noise from decisions.</p>
-        <p>Just consistent, rigorous thinking.</p>
-      </div>
+      <p>We turn opinions into options.</p>
+      <p>We remove the noise from decisions.</p>
+      <p>Just consistent, rigorous thinking.</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-brand">
+      <div class="footer-col">
         <h3>METTLE</h3>
       </div>
-      <div class="footer-links">
+      <div class="footer-col">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="service.html">Services</a>
@@ -157,7 +159,7 @@
         <a href="media.html">Media</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-col">
         <p>&copy; 2025 Mettle Hospitality. All rights reserved.</p>
       </div>
     </div>
