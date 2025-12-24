@@ -1278,169 +1278,315 @@ footer {
   }
 }
 
-/* =========================================
-   SERVICES PAGE - DECK LAYOUT
-   ========================================= */
+/* =================================================================
+   NEW SERVICES PAGE STYLES (Appended)
+   - Loop Diagram (Centered, Dark Overlay, Crimson Lines)
+   - Secret Sauce Section
+   ================================================================= */
 
-.services-body {
-    background-color: #020617; /* Pure Black/Navy */
-    color: #f9fafb;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-/* MAIN CONTAINER */
-.services-deck-layout {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 80px);
-    margin-top: 80px;
-    background-color: #020617;
-}
-
-/* 1. CONTENT SIDE (Text + Diagram) - Takes 60-65% width */
-.services-content-side {
-    flex: 1.5;
-    padding: 60px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.deck-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #f9fafb;
-    margin-bottom: 60px;
-}
-
-/* THE GRID: Left Text | Diagram | Right Text */
-.deck-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px 1fr; /* Text | Fixed Diagram | Text */
-    gap: 40px;
-    align-items: center;
-}
-
-/* TEXT COLUMNS */
-.deck-col-left {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 400px; /* Match diagram height approx */
-}
-
-.deck-col-right {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px; /* Slightly taller for 3 items */
-}
-
-.deck-item h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #f9fafb;
-    margin-bottom: 8px;
-}
-
-.deck-item p {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: #cbd5e1;
-    line-height: 1.5;
-}
-
-/* DIAGRAM LOOP */
-.deck-col-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.deck-loop {
+/* --- Service Page Container --- */
+.services-wrapper {
     position: relative;
-    width: 280px;
-    height: 280px;
-    border: 8px solid #f5d5c8; /* Blush */
-    border-radius: 50%;
-}
-
-.deck-node {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #f5d5c8;
-    border-radius: 50%;
+    width: 100%;
+    min-height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #020617;
-}
-
-.deck-node svg { width: 24px; height: 24px; }
-
-/* Node Positions on the Ring */
-.node-1 { top: 15%; left: 0%; transform: translate(-50%, -50%); } /* Turnkey */
-.node-2 { top: 10%; right: 10%; transform: translate(50%, -50%); } /* Culinary */
-.node-3 { top: 50%; right: -25px; transform: translateY(-50%); }   /* Scale */
-.node-4 { bottom: 15%; right: 0%; transform: translate(50%, 50%); } /* Dining */
-.node-5 { bottom: 15%; left: 0%; transform: translate(-50%, 50%); } /* Styling */
-
-
-/* 2. IMAGE SIDE - Takes remaining width */
-.services-image-side {
-    flex: 0.8;
-    background-color: #111;
     overflow: hidden;
+    /* Ensure it sits below fixed header */
+    padding-top: 80px; 
 }
 
-.services-image-side img {
+/* Background Image (Fixed/Parallax) */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/services-chef.jpg'); /* Ensure this image exists */
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* Heavy Dark Overlay */
+.bg-layer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Heavy dark tint */
+    z-index: -1;
+}
+
+/* --- The Grid Layout: Left Text | Ring | Right Text --- */
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 340px 1fr; 
+    width: 90%;
+    max-width: 1400px;
+    height: 75vh;
+    position: relative;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* --- Text Styling (No Cards) --- */
+.text-block {
+    text-align: inherit;
+    position: relative;
+}
+
+.text-block h3 {
+    font-family: 'Playfair Display', serif; /* Explicit override if needed */
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    color: var(--text-beige);
+    font-weight: 400;
+}
+
+/* The Crimson Line (Brand Signature) */
+.crimson-line {
+    width: 100%; 
+    height: 3px;
+    background-color: var(--accent-crimson);
+    margin-bottom: 12px;
+}
+
+.text-block p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cccccc; /* Slightly dimmed beige */
+    opacity: 0.9;
+}
+
+/* --- Left Column (2 Items) --- */
+.left-col {
+    align-items: flex-end; /* Align right to touch lines */
+    text-align: right;
+    justify-content: space-evenly;
+    padding-right: 0;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Connect directly */
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* --- Right Column (3 Items) --- */
+.right-col {
+    align-items: flex-start; /* Align left to touch lines */
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.item-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* --- Connector Lines (Visible Arrows) --- */
+.connector-line {
+    height: 1px;
+    width: 60px; /* Line length */
+    background-color: var(--text-beige);
+    opacity: 0.4;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Small dots at the text-end of lines */
+.connector-line::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--accent-crimson);
+    border-radius: 50%;
+    position: absolute;
+}
+/* Left lines: dot on left end */
+.item-left .connector-line::after { left: 0; top: -1.5px; }
+/* Right lines: dot on right end */
+.item-right .connector-line::after { right: 0; top: -1.5px; }
+
+/* --- Center Loop Ring --- */
+.center-col {
+    align-items: center;
+    justify-content: center;
+}
+
+.loop-ring {
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(245, 245, 220, 0.2); /* Faint beige ring */
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 40px rgba(165, 64, 64, 0.1); /* Faint crimson glow */
+}
+
+/* Nodes on Ring */
+.node {
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-crimson);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(165, 64, 64, 0.8);
+    z-index: 2;
+}
+
+/* Node Positioning (Matches the Asymmetrical Text) */
+/* Left Side (2 Nodes) */
+.node-l-1 { top: 25%; left: 6.7%; transform: translate(-50%, -50%); } /* Matches Turnkey */
+.node-l-2 { bottom: 25%; left: 6.7%; transform: translate(-50%, 50%); } /* Matches Styling */
+
+/* Right Side (3 Nodes) */
+.node-r-1 { top: 15%; right: 6.7%; transform: translate(50%, -50%); } /* Matches F&B */
+.node-r-2 { top: 50%; right: -5px; transform: translate(50%, -50%); } /* Matches Scale */
+.node-r-3 { bottom: 15%; right: 6.7%; transform: translate(50%, 50%); } /* Matches Private Dining */
+
+
+/* --- Section 2: Secret Sauce --- */
+.secret-sauce-wrapper {
+    width: 100%;
+    min-height: 80vh; 
+    background-color: var(--bg-black); /* Solid black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    border-top: 1px solid var(--border-grey);
+}
+
+.sauce-container {
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    align-items: center;
+    gap: 80px;
+}
+
+.sauce-image {
+    flex: 1;
+    height: 500px;
+    position: relative;
+    border-right: 4px solid var(--accent-crimson); /* The crimson border */
+}
+
+.sauce-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
+    filter: grayscale(100%); /* Black & white photo */
 }
 
-
-/* SECRET SAUCE */
-.secret-sauce {
-    padding: 100px 40px;
-    background-color: #0f172a;
-    text-align: center;
-    color: #f9fafb;
+.sauce-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
-.secret-inner h2 {
+.sauce-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #f5d5c8;
+    font-size: 3rem;
+    color: var(--text-beige);
+    margin-bottom: 25px;
+    text-shadow: none; /* Clean look */
+}
+
+/* Large Crimson Line for Header */
+.crimson-line.large {
+    width: 120px; 
+    height: 4px;
+    background-color: var(--accent-crimson);
     margin-bottom: 40px;
 }
 
-.secret-inner p {
-    font-size: 1.2rem;
-    color: #94a3b8;
-    margin-bottom: 10px;
+.sauce-quote {
+    font-family: 'Playfair Display', serif; /* Serif for quote */
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text-beige);
+    opacity: 0.9;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-    .deck-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .deck-col-left, .deck-col-right {
-        text-align: center;
+
+/* --- Responsive Adjustments for Services --- */
+@media (max-width: 1024px) {
+    .services-wrapper {
         height: auto;
+        padding: 120px 20px 60px;
+    }
+
+    .content-container {
+        grid-template-columns: 1fr; /* Stack vertically */
+        height: auto;
+        gap: 50px;
+    }
+
+    /* Hide the complex loop diagram on tablet/mobile */
+    .loop-ring, .connector-line, .center-col {
+        display: none; 
+    }
+
+    .left-col, .right-col {
+        align-items: flex-start;
+        text-align: left;
+        padding: 0;
+    }
+
+    .item-left, .item-right {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .service-item {
+        margin-bottom: 30px;
+        /* Mobile fallback: Crimson left border instead of horizontal line */
+        border-left: 3px solid var(--accent-crimson); 
+        padding-left: 20px;
+    }
+    
+    .service-item .crimson-line {
+        display: none; /* Hide horizontal line on mobile */
+    }
+
+    /* Secret Sauce Mobile */
+    .sauce-container {
+        flex-direction: column;
         gap: 40px;
     }
-    .deck-loop { margin: 40px auto; }
-    .services-image-side { display: none; } /* Hide side image on smaller screens */
+
+    .sauce-image {
+        width: 100%;
+        height: 300px;
+        border-right: none;
+        border-bottom: 4px solid var(--accent-crimson);
+    }
+    
+    .sauce-content h2 { font-size: 2.2rem; }
+    .sauce-quote { font-size: 1.4rem; }
 }
 
 
