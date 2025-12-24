@@ -1042,3 +1042,234 @@ footer {
 .dropdown.active .dropdown-menu {
   display: block;
 }
+
+/* ===== ABOUT US PAGE STYLES ===== */
+
+/* SLIDE 1: THE CREW */
+.crew-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('images/crew.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.crew-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  z-index: 1;
+}
+
+.crew-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 80px 60px;
+  color: #f1f5f9;
+}
+
+.crew-header {
+  border-left: 6px solid #8B3A3A;
+  padding-left: 24px;
+  margin-bottom: 40px;
+}
+
+.crew-header h1 {
+  font-size: 1.2rem;
+  color: #8B3A3A;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.crew-title {
+  font-size: 2.5rem;
+  color: #f1f5f9;
+  margin: 0 0 40px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.crew-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.crew-pillar h3 {
+  font-size: 1.1rem;
+  color: #8B3A3A;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.crew-pillar p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* SLIDE 2: PURPOSE */
+.purpose-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+.purpose-image {
+  flex: 1;
+  min-width: 300px;
+  min-height: 100vh;
+  background-image: url('images/chef-cooking.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.purpose-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 80px 60px;
+  background: #0f172a;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.purpose-header {
+  border-left: 6px solid #8B3A3A;
+  padding-left: 24px;
+  margin-bottom: 40px;
+}
+
+.purpose-header h2 {
+  font-size: 1.2rem;
+  color: #8B3A3A;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.purpose-title {
+  font-size: 2rem;
+  color: #f1f5f9;
+  margin: 0 0 40px 0;
+  font-weight: 700;
+}
+
+.purpose-text {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.purpose-text p {
+  margin-bottom: 24px;
+}
+
+.purpose-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* SLIDE 3: NORTH STAR */
+.north-star-section {
+  padding: 120px 60px;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.north-star-header {
+  border-left: 6px solid #8B3A3A;
+  padding-left: 24px;
+  margin-bottom: 60px;
+}
+
+.north-star-header h2 {
+  font-size: 1.2rem;
+  color: #8B3A3A;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.north-star-title {
+  font-size: 2.2rem;
+  color: #f1f5f9;
+  margin: 0 0 80px 0;
+  font-weight: 700;
+}
+
+.north-star-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+}
+
+.north-star-pillar h4 {
+  font-size: 1.2rem;
+  color: #8B3A3A;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.north-star-pillar p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* SCROLL SPACER */
+.scroll-spacer {
+  height: 200px;
+  background: #0f172a;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .crew-section {
+    background-attachment: scroll;
+  }
+
+  .crew-content {
+    max-width: 100%;
+    padding: 60px 30px;
+  }
+
+  .crew-title {
+    font-size: 1.8rem;
+  }
+
+  .purpose-section {
+    flex-direction: column;
+  }
+
+  .purpose-image {
+    min-height: 300px;
+  }
+
+  .purpose-content {
+    padding: 60px 30px;
+  }
+
+  .north-star-section {
+    padding: 80px 30px;
+  }
+
+  .north-star-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
