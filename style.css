@@ -1077,24 +1077,10 @@ footer {
   color: #f1f5f9;
 }
 
-.crew-header {
-  border-left: 6px solid #8B3A3A;
-  padding-left: 24px;
-  margin-bottom: 40px;
-}
-
-.crew-header h1 {
-  font-size: 1.2rem;
-  color: #8B3A3A;
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 .crew-title {
   font-size: 2.5rem;
   color: #f1f5f9;
-  margin: 0 0 40px 0;
+  margin: 0 0 60px 0;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1102,7 +1088,7 @@ footer {
 .crew-pillars {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 
 .crew-pillar h3 {
@@ -1110,13 +1096,16 @@ footer {
   color: #8B3A3A;
   margin: 0 0 12px 0;
   font-weight: 700;
+  padding-top: 16px;
+  border-top: 4px solid #8B3A3A;
+  display: inline-block;
 }
 
 .crew-pillar p {
   color: #cbd5e1;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin: 0;
+  margin: 12px 0 0 0;
 }
 
 /* SLIDE 2: PURPOSE */
@@ -1131,7 +1120,7 @@ footer {
   flex: 1;
   min-width: 300px;
   min-height: 100vh;
-  background-image: url('images/chef-cooking.jpg');
+  background-image: url('images/viditblack.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -1147,16 +1136,10 @@ footer {
   justify-content: center;
 }
 
-.purpose-header {
-  border-left: 6px solid #8B3A3A;
-  padding-left: 24px;
-  margin-bottom: 40px;
-}
-
-.purpose-header h2 {
-  font-size: 1.2rem;
+.purpose-label {
+  font-size: 0.9rem;
   color: #8B3A3A;
-  margin: 0;
+  margin-bottom: 30px;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -1184,23 +1167,13 @@ footer {
 
 /* SLIDE 3: NORTH STAR */
 .north-star-section {
-  padding: 120px 60px;
+  min-height: 100vh;
+  padding: 100px 60px;
   background: #0f172a;
   color: #f1f5f9;
-}
-
-.north-star-header {
-  border-left: 6px solid #8B3A3A;
-  padding-left: 24px;
-  margin-bottom: 60px;
-}
-
-.north-star-header h2 {
-  font-size: 1.2rem;
-  color: #8B3A3A;
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .north-star-title {
@@ -1210,11 +1183,19 @@ footer {
   font-weight: 700;
 }
 
+.north-star-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+}
+
 .north-star-grid {
+  flex: 1;
+  min-width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  max-width: 1200px;
 }
 
 .north-star-pillar h4 {
@@ -1222,18 +1203,30 @@ footer {
   color: #8B3A3A;
   margin: 0 0 16px 0;
   font-weight: 700;
+  padding-top: 16px;
+  border-top: 4px solid #8B3A3A;
+  display: inline-block;
 }
 
 .north-star-pillar p {
   color: #cbd5e1;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin: 0;
+  margin: 12px 0 0 0;
 }
 
-/* SCROLL SPACER */
-.scroll-spacer {
-  height: 200px;
+.north-star-image {
+  flex: 1;
+  min-width: 300px;
+  min-height: 500px;
+  background-image: url('images/honey.HEIC');
+  background-size: cover;
+  background-position: center;
+}
+
+/* SCROLL SPACERS - LARGER FOR SMOOTH JUMP */
+.scroll-spacer-large {
+  height: 300px;
   background: #0f172a;
 }
 
@@ -1250,6 +1243,11 @@ footer {
 
   .crew-title {
     font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .crew-pillars {
+    gap: 40px;
   }
 
   .purpose-section {
@@ -1268,8 +1266,18 @@ footer {
     padding: 80px 30px;
   }
 
+  .north-star-wrapper {
+    flex-direction: column;
+  }
+
   .north-star-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .north-star-image {
+    min-height: 300px;
+    order: -1;
+  }
 }
+
