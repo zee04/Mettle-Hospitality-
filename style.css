@@ -2003,69 +2003,84 @@ footer {
   right: 0; /* dot near text */
 }
 
-/* LOOP NODES */
+/* LOOP NODES – previous version */
 
 .center-col {
   align-items: center;
 }
 
 .loop-ring {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  border: 5px solid rgba(245, 245, 220, 0.7);
+  width: 420px;
+  height: 420px;
+  border-radius: var(--radius-full);
+  border: 6px solid rgba(245, 245, 220, 0.6);
   position: relative;
-  box-shadow: none;
+  box-shadow: var(--shadow-lg), inset var(--shadow-lg);
 }
 
-
 .node {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: #fbe9e9;
-  box-shadow: 0 0 0 4px #000;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-crimson);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(var(--brand-crimson-rgb), 0.9), 0 0 0 4px #000000;
+  z-index: 5;
 }
 
 .node::before {
-  display: none; /* remove inner black circle */
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: #000000;
+  border: 2px solid var(--color-text);
 }
 
 .node svg {
-  stroke: #000;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-text);
+  stroke-width: 1.6;
+  fill: none;
 }
 
-/* positions: left, bottom, right, top, extra-right if you keep 5th */
-.node-l-1 { /* left */
-  top: 50%;
-  left: 0;
+/* positions around the ring */
+
+.node-l-1 {
+  top: 25%;
+  left: 5%;
   transform: translate(-50%, -50%);
 }
 
-.node-l-2 { /* bottom */
-  bottom: 0;
-  left: 50%;
+.node-l-2 {
+  bottom: 25%;
+  left: 5%;
   transform: translate(-50%, 50%);
 }
 
-.node-r-1 { /* top */
-  top: 0;
-  right: 50%;
+.node-r-1 {
+  top: 15%;
+  right: 5%;
   transform: translate(50%, -50%);
 }
 
-.node-r-2 { /* right */
+.node-r-2 {
   top: 50%;
-  right: 0;
+  right: -10px;
   transform: translate(50%, -50%);
 }
 
-/* optional 5th: slightly lower right */
 .node-r-3 {
   bottom: 15%;
-  right: 0;
+  right: 5%;
   transform: translate(50%, 50%);
 }
+
 
 
 /* SECRET SAUCE – match brand deck */
