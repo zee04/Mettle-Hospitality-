@@ -1917,19 +1917,17 @@ footer {
 .crimson-line {
   display: none;
 }
-
-/* CONNECTOR LINES – fixed geometry */
+/* CONNECTOR LINES – node → up → across → text */
 
 .connector-line {
   height: 2px;
   width: 90px;
   background-color: var(--brand-crimson);
-  opacity: 1;
   position: relative;
   flex-shrink: 0;
 }
 
-/* vertical stem (from node) + dot (near text) */
+/* Vertical stem from node */
 .connector-line::before {
   content: "";
   position: absolute;
@@ -1937,6 +1935,7 @@ footer {
   background-color: var(--brand-crimson);
 }
 
+/* Dot near text */
 .connector-line::after {
   content: "";
   position: absolute;
@@ -1948,59 +1947,61 @@ footer {
   transform: translateY(-50%);
 }
 
-/* LEFT SIDE (Turnkey, Styling) – shorter stems so no stub sticks out */
+/* LEFT SIDE (Turnkey, Food Styling) */
 
 .item-left .connector-line {
-  margin-right: var(--space-20);
+  margin-right: 20px;
 }
 
-/* Turnkey */
+/* Turnkey – shorter stem so no stub */
 .left-col .service-item:nth-child(1) .connector-line::before {
   right: 0;
   bottom: 100%;
-  height: 26px; /* shorter so it meets line cleanly */
+  height: 26px;
 }
 
-/* Food Styling */
+/* Food Styling – slightly longer */
 .left-col .service-item:nth-child(2) .connector-line::before {
   right: 0;
   bottom: 100%;
   height: 30px;
 }
 
+/* Dot at text side (left column) */
 .item-left .connector-line::after {
-  left: 0; /* dot near text */
+  left: 0;
 }
 
 /* RIGHT SIDE (F&B, Scale, Private Dining) */
 
 .item-right .connector-line {
-  margin-left: var(--space-20);
+  margin-left: 20px;
 }
 
-/* F&B Consultancy – adjusted height so angle looks right */
+/* F&B Consultancy – top right */
 .right-col .service-item:nth-child(1) .connector-line::before {
   left: 0;
   bottom: 100%;
   height: 32px;
 }
 
-/* Scale & Franchise */
+/* Scale & Franchise – middle right */
 .right-col .service-item:nth-child(2) .connector-line::before {
   left: 0;
   bottom: 100%;
   height: 36px;
 }
 
-/* Private Dining */
+/* Private Dining – bottom right */
 .right-col .service-item:nth-child(3) .connector-line::before {
   left: 0;
   bottom: 100%;
   height: 30px;
 }
 
+/* Dot at text side (right column) */
 .item-right .connector-line::after {
-  right: 0; /* dot near text */
+  right: 0;
 }
 
 /* LOOP NODES – previous version */
