@@ -1981,8 +1981,9 @@ footer {
 /* F&B Consultancy – top right */
 .right-col .service-item:nth-child(1) .connector-line::before {
   left: 0;
-  bottom: 100%;
-  height: 32px;
+  top: 100%;     /* attach below the line */
+  bottom: auto;  /* cancel bottom */
+  height: 32px;  /* length of downward stem */
 }
 
 /* Scale & Franchise */
