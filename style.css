@@ -1978,31 +1978,33 @@ footer {
   margin-left: 20px;
 }
 
-/* F&B Consultancy – top right */
+/* F&B Consultancy – node is slightly above text,
+   so stem drops a bit BEFORE heading across */
 .right-col .service-item:nth-child(1) .connector-line::before {
   left: 0;
-  bottom: 100%;
-  height: 32px;
+  bottom: 80%;   /* not full 100%, stem ends a bit lower */
+  height: 26px;  /* shorter stem */
 }
 
-/* Scale & Franchise – middle right */
+/* Scale & Franchise – roughly level with node, longer stem */
 .right-col .service-item:nth-child(2) .connector-line::before {
   left: 0;
   bottom: 100%;
-  height: 36px;
+  height: 34px;
 }
 
-/* Private Dining – bottom right */
+/* Private Dining – node sits lower, so stem is shorter again */
 .right-col .service-item:nth-child(3) .connector-line::before {
   left: 0;
-  bottom: 100%;
-  height: 30px;
+  bottom: 90%;
+  height: 22px;
 }
 
 /* Dot at text side (right column) */
 .item-right .connector-line::after {
   right: 0;
 }
+
 
 /* LOOP NODES – previous version */
 
